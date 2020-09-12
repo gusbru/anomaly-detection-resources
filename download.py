@@ -14,7 +14,7 @@ import urllib.request
 # initialize the log directory if it does not exist
 pathlib.Path('resources').mkdir(parents=True, exist_ok=True)
 
-f = open('resource_urls\\papers.txt', 'r')
+f = open('resource_urls/papers.txt', 'r')
 for line in f:
     # print(line)
     line_splits = line.split(' | ')
@@ -27,6 +27,6 @@ for line in f:
     url = line_splits[1]
 
     print('Downloading', file_name, 'from', url)
-    urllib.request.urlretrieve(url, "resources\\" + file_name + '.pdf')
+    urllib.request.urlretrieve(url, "resources/" + file_name + '.pdf')
 
 f.close()
